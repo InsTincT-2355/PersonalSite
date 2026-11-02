@@ -130,8 +130,11 @@ p { margin: 0 0 1em; }
     linear-gradient(0deg, var(--bg) 0%, transparent 30%);
 }
 .hero .container { position: relative; padding-top: 60px; padding-bottom: 80px; }
-.hero h1 { font-size: clamp(3.2rem, 8vw, 6.4rem); max-width: 12ch; }
-.hero h1 em { display: block; font-size: .42em; line-height: 1.2; margin-top: 14px; }
+.hero h1 { font-size: clamp(3.2rem, 8vw, 6.4rem); max-width: 12ch; margin-bottom: 14px; }
+.hero-role {
+  font-family: var(--font-body); font-weight: 600; font-size: clamp(.95rem, 1.6vw, 1.15rem);
+  letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-bottom: 26px;
+}
 .hero .lead { font-size: clamp(1.02rem, 1.6vw, 1.18rem); color: #c8c3ba; max-width: 540px; margin-bottom: 34px; }
 .hero .actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .status-pill {
@@ -353,7 +356,7 @@ a.card:hover { transform: translateY(-3px); border-color: rgba(201, 169, 110, .4
 .carousel-dots button { width: 7px; height: 7px; padding: 0; border-radius: 50%; border: 0; background: rgba(255, 255, 255, .4); cursor: pointer; transition: background .25s, width .25s; }
 .carousel-dots button.active { width: 20px; border-radius: 4px; background: var(--accent); }
 
-.interests { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.interests { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
 .interest { border-top: 1px solid var(--border-strong); padding-top: 26px; }
 .interest .icon {
   width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
@@ -362,7 +365,8 @@ a.card:hover { transform: translateY(-3px); border-color: rgba(201, 169, 110, .4
 .interest .icon svg { width: 22px; height: 22px; }
 .interest h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.7rem; margin-bottom: 6px; }
 .interest p { color: var(--muted); font-size: .94rem; margin: 0; }
-@media (max-width: 900px) { .interests { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; } }
+@media (max-width: 1100px) { .interests { grid-template-columns: repeat(3, 1fr); gap: 28px 20px; } }
+@media (max-width: 760px) { .interests { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .interests { grid-template-columns: 1fr; } }
 
 .timeline { position: relative; padding-left: 32px; }
@@ -413,7 +417,7 @@ a.card:hover { transform: translateY(-3px); border-color: rgba(201, 169, 110, .4
 }
 
 .course-feature {
-  display: grid; grid-template-columns: 1.15fr 1fr; gap: 0; margin-bottom: 24px;
+  display: grid; grid-template-columns: 1.15fr 1fr; gap: 0; margin-bottom: 56px;
   background: var(--surface); border: 1px solid var(--border); border-top: 2px solid var(--accent); border-radius: var(--radius); overflow: hidden;
 }
 .course-feature-media { display: grid; grid-template-rows: 1fr 1fr; background: #0d0d0d; border-right: 1px solid var(--border); }
