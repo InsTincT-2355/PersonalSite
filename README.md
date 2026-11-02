@@ -8,4 +8,4 @@ My personal portfolio website, plus the coursework it links to.
 | [School/Courses](School/Courses) | Selected University of South Carolina coursework, one folder per course ([overview](School/README.md)) |
 
 ## Deploying on Vercel
-Import this repo in Vercel and set **Root Directory** to `site`. Framework preset: **Other**, with no build command.
+Import this repo in Vercel with the defaults. The root `vercel.json` tells Vercel to publish only the `site` folder, so the coursework is never deployed.
