@@ -1,0 +1,81 @@
+START
+
+
+
+DEF FUNCTION main():    
+
+    PRINT("The Hotel Reservation program\n")
+
+    WHILE True:
+
+        # get datetime objects from user
+
+        SET arrival_date TO get_arrival_date()
+
+        SET departure_date TO get_departure_date(arrival_date)
+
+        PRINT()
+
+
+ 
+        # calculate nights and cost
+
+        SET rate TO 85.0
+
+        SET rate_message TO ""
+
+        IF arrival_date.month EQUALS 8:    # August is high season
+
+            SET rate TO 105.0
+
+            SET rate_message TO "(High season)"
+
+        SET total_nights TO (departure_date - arrival_date).days
+
+        SET total_cost TO rate * total_nights
+
+
+
+        # format resultsif result.lower() != "y":
+
+        SET date_format TO "%B %d, %Y"
+
+        locale.setlocale(locale.LC_ALL, '')
+
+        PRINT("Arrival Date:  ", arrival_date.strftime(date_format))
+
+        PRINT("Departure Date:", departure_date.strftime(date_format))
+
+        PRINT("Nightly rate:  ", locale.currency(rate), rate_message)
+
+        PRINT("Total nights:  ", total_nights)
+
+        PRINT("Total price:   ", locale.currency(total_cost))
+
+        PRINT()
+
+
+
+        # check whether the user wants to continue
+
+        SET result TO INPUT("Continue? (y/n): ")
+
+        PRINT()
+
+        IF result.lower() != "y":
+
+            PRINT("Bye!")
+
+            break
+
+         
+
+IF __name__ EQUALS "__main__":
+
+    main()
+
+
+
+
+END
+

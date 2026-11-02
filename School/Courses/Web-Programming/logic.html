@@ -1,0 +1,164 @@
+<!DocTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Logic</title>
+</head>
+
+
+<body>
+
+<script>
+
+
+x=6;     
+/*6 is in x*/
+
+y=4;      
+/*4 is in y */
+
+alert(x>y)  
+/*Checks if x is greater than y if it is true it will prompt a boolean (true) and vice if we did x<y we will get a false alert box*/
+
+a = "Cat"; 
+//Cat is stored in a
+
+b="cat"; 
+// cat is stored in b
+
+alert(a!=b); 
+//This will check if a is not equal to b since both are different cause of captials we will get a true
+
+alert(a.toLowerCase()!=b)  
+// Here we will get a false because we converted a to lower case so now a and b are the same
+
+
+// We are using an If statement to check if X is greater than 10 if the value is true then we will get an alert box saying very good but we also need a false condition incase it was not larger than 10 otherwise we wont get anything so we use else. 
+if (x>10) {
+    alert("Very Good")
+
+}
+
+else {
+    alert("too bad") //Since x is 6 and it is not greater than 10 we will get this alert box
+}
+
+ 
+
+//Objective of this website is to have a 50 /50 chance to get an alert saying boo
+
+z=Math.round(Math.random());  // we get either 0 or 1
+
+if (z==0){   //If z<1 / z!=1 
+    alert("boo")   
+}
+
+
+
+c=Math.round(Math.random()*19) + 1  //we should get a number from 1-20
+alert(c)
+
+if (c<=6) {     //since 6 is a random number if it is equal to 6 and below the background color is going to be red
+    document.body.style.backgroundColor='red';
+}
+
+else if (c<=15) {
+    document.body.style.backgroundColor='green'; //if the number is less than 15 then background color is green
+}
+
+else {
+    document.body.style.backgroundColor='blue';  //this case if none of the statements above are true then it will be blue. we do not have to check for less than 20 because it is the final condition left.   (1-6 , 6-15 , 15-20 )
+
+}
+
+
+// check wether the animal typed in the input box is a chicken or not
+function clickclick() {   //function name clickclick
+
+    if(document.getElementById('dog1').value=="chicken")  {   //we created an if statement to see if the input box with the id of dog1 value is equal to chicken or not 
+        document.getElementById('dog2').value=="wow, chicken chicken"  // if the first input box typed by user was chicken the second input box will display wow chicken chicken. remember .value can only be used when trying to change the value of input boxes
+    }   
+
+
+    else {
+        alert("Nekcihc")   //this will display if the user didnt type chicken in the first input box
+    }
+
+
+}
+
+
+x=15;
+y=5;
+z=8;
+y=9;
+if(x>y||z<w) {   //double line is or statement && is used for and
+  //  (x>y&&(z+5<w))||1==1
+    alert("Dog")
+}
+
+else {
+    alert("cat");
+}
+
+
+
+</script>
+
+
+
+<h1 id="cow"> Enter your Fav Animal </h1>
+
+<input type="text" id="dog1">   <!-- creates a input with a text box-->
+<br>
+<input type="text" id="dog2">   <!-- creates a input with a text box-->
+<br>
+<input type="button" onclick="clickclick()"> <!-- creates a input with a button-->
+ 
+
+<input type="text" id="dog1">   <!-- creates a input with a text box-->
+<br>
+<input type="text" id="dog2">   <!-- creates a input with a text box-->
+<br>
+<input type="button" value="click" onclick="check()">   <!-- creates a input with a text box with a value of click as a text on the button --> 
+<br>
+
+
+<script>
+    a=parseFloat(("what is your test grade")); //we are storing a number into a and using parsefloat to change it into a math number and not just a string
+    b=parseFloat(("what is your test grade")); //we are storing a number into a and using parsefloat to change it into a math number and not just a string
+    c=parseFloat(("what is your test grade")); //we are storing a number into a and using parsefloat to change it into a math number and not just a string
+    d=parseFloat(("what is your test grade")); //we are storing a number into a and using parsefloat to change it into a math number and not just a string
+
+    e=a+b+c+d;  // we are adding all the inputs we got into a variable e
+
+
+    if(e>=400) {    // now here we are checking if the variable e has a number higher or equal to 400 if it is then we get a text wow good job in the place where the id cow is used 
+        document.getElementById("cow").innerHTML="Wow good job"
+    }
+  
+    else if (e>=360) {     // now here we are checking if the variable e has a number higher or equal to 360 if it is then we get a text almost in the place where the id cow is used 
+        document.getElementById("cow").innerHTML="ALmost"
+    }
+
+    else {    // now here since it is the last condition we can just use else and since its not 36o higher or 400 higher we will get a go study text where the id cow is used.
+        document.getElementById("cow").innerHTML="Go study"
+
+    }
+
+</script>
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>
